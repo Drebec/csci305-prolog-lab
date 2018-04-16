@@ -118,3 +118,31 @@ parent('Antony Armstrong-Jones', 'Viscount Linley').
 parent('Princess Margaret', 'Viscount Linley').
 parent('Antony Armstrong-Jones', 'Lady Sarah Chatto').
 parent('Princess Margaret', 'Lady Sarah Chatto').
+
+mother(M,C):- parent(M,C), female(M).
+father(F,C):- parent(F,C), male(F).
+
+spouse(X,Y):- married(X,Y).
+spouse(X,Y):- married(Y,X).
+
+child(C,P) :- parent(P,C).
+son(S,P) :- parent(P,S), male(S).
+daughter(D,P) :- parent(P,D), female(D).
+
+sibling(X,Y) :- parent(P,Y), parent(P,X), not(X=Y).
+brother(B,Y) :- sibling(B,Y), male(B).
+sister(S,Y) :- sibling(S,Y), female(S).
+
+uncle(U,Y) :- parent(P,Y), brother(U,P).
+uncle(U,Y) :-
+aunt(A,Y) :- parent(P,Y), sister(A,P).
+aunt(A,Y) :- parent(P,Y), sibling(P,S), spouse(S,A), female(A).
+
+grandparent(GP,Y) :- parent(P,Y), parent(GP,P).
+grandfather(GF,Y) :- grandparent(GF,Y), male(GF).
+grandmother(GM,Y) :- grandparent(GM,Y), female(GM).
+grandchild(GC,Y) :- grandparent(Y,GC).
+
+older(X,Y) :- born(X,D1), born(Y,D2), D1 < D2.
+
+regentWhenBorn(X,Y) :- born(Y,D1), reigned(X,D2,D3), D2 =< D1, D1 < D3.

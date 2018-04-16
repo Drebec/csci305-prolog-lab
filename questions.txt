@@ -1,0 +1,49 @@
+Drew Beck
+Prolog Lab
+
+1.  ?- father(X, 'Queen Elizabeth II').
+    X = 'King George VI' ;
+2.  ?- grandmother(X, 'Queen Elizabeth II').
+    X = 'Queen Mary' ;
+3.  ?- grandfather(X, 'Queen Elizabeth II').
+    X = 'King George V' ;
+4.  ?- grandparent(X, 'Queen Elizabeth II').
+    X = 'King George V' ;
+    X = 'Queen Mary' ;
+5.  ?- grandparent('Queen Elizabeth II', X).
+    X = 'Prince William' ;
+    X = 'Prince Henry' ;
+6.  ?- sibling(X, 'Queen Elizabeth II').
+    X = 'Princess Margaret' ;
+7.  ?- son(X, 'Queen Elizabeth II').
+    X = 'Prince Charles' ;
+    X = 'Prince Andrew' ;
+    X = 'Prince Edward'.
+8.  ?- daughter(X, 'Queen Elizabeth II').
+    X = 'Princess Anne' ;
+9.
+10. ?- spouse(X, 'Prince William').
+    X = 'Catherine Middleton'.
+11.
+12.
+13. ?- older('Prince Henry', 'Prince William').
+    false.
+14. ?- older(X, 'Queen Elizabeth II').
+    X = 'Queen Victoria' ;
+    X = 'Princess Alexandra of Denmark' ;
+    X = 'Queen Mary' ;
+    X = 'Mrs Simpson' ;
+    X = 'Lady Elizabeth Bowes-Lyon' ;
+    X = 'Prince Albert' ;
+    X = 'King Edward VII' ;
+    X = 'King George V' ;
+    X = 'King Edward VIII' ;
+    X = 'King George VI' ;
+    X = 'Prince Philip' ;
+15. ?- regentWhenBorn(X, 'Queen Elizabeth II').
+    X = 'King George V' ;
+16. I enjoy how straightforward Prolog is. I also enjoy how rules can be used in different ways by changing which term is variable.
+17. I don't like how prolog programs are run. There's no command line interface like the other languages we've used.
+18. I did enjoy this lab. It was simple enough, but still covered a lot of different basic Prolog topics.
+19. Approximately XXXXXXX hours.
+20. I don't think I will ever use Prolog again. I can see it being useful for database systems though.
