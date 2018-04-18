@@ -82,3 +82,17 @@ Prolog Lab
 19. Approximately 2 hours.
 
 20. I don't think I will ever use Prolog again. I can see it being useful for database systems though.
+
+EC1.	?- cousin(X, 'Prince Charles').
+	X = 'Viscount Linley' ;
+	X = 'Lady Sarah Chatto' ;
+	X = 'Viscount Linley' ;
+	X = 'Lady Sarah Chatto' ;
+	false.
+
+EC2.	?- cousin('Prince Charles', X).
+	X = 'Viscount Linley' ;
+	X = 'Viscount Linley' ;
+	X = 'Lady Sarah Chatto' ;
+	X = 'Lady Sarah Chatto' ;
+	false.
