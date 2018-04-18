@@ -3,31 +3,60 @@ Prolog Lab
 
 1.  ?- father(X, 'Queen Elizabeth II').
     X = 'King George VI' ;
+
 2.  ?- grandmother(X, 'Queen Elizabeth II').
     X = 'Queen Mary' ;
 3.  ?- grandfather(X, 'Queen Elizabeth II').
     X = 'King George V' ;
+
 4.  ?- grandparent(X, 'Queen Elizabeth II').
     X = 'King George V' ;
     X = 'Queen Mary' ;
+
 5.  ?- grandparent('Queen Elizabeth II', X).
     X = 'Prince William' ;
     X = 'Prince Henry' ;
+
 6.  ?- sibling(X, 'Queen Elizabeth II').
     X = 'Princess Margaret' ;
+
 7.  ?- son(X, 'Queen Elizabeth II').
     X = 'Prince Charles' ;
     X = 'Prince Andrew' ;
     X = 'Prince Edward'.
+
 8.  ?- daughter(X, 'Queen Elizabeth II').
     X = 'Princess Anne' ;
-9.
+
+9.  ?- aunt(X, 'Lady Diana Spencer').
+    false.
+    Lady Diana Spencer has no aunts in this family tree so this makes sense.
+
 10. ?- spouse(X, 'Prince William').
     X = 'Catherine Middleton'.
-11.
-12.
+
+11. ?- ancestor(X, 'Prince Henry').
+    X = 'Prince Charles' ;
+    X = 'Lady Diana Spencer' ;
+    X = 'Queen Elizabeth II' ;
+    X = 'Prince Philip' ;
+    X = 'King George VI' ;
+    X = 'Lady Elizabeth Bowes-Lyon' ;
+    X = 'King George V' ;
+    X = 'Queen Mary' ;
+    X = 'King Edward VII' ;
+    X = 'Princess Alexandra of Denmark' ;
+    X = 'Prince Albert' ;
+    X = 'Queen Victoria' ;
+    false.
+
+12.?- descendant('Queen Victoria', Y).
+    false.
+    Queen Victoria is a descendant of nobody in this family tree so this makes sense.
+
 13. ?- older('Prince Henry', 'Prince William').
     false.
+
 14. ?- older(X, 'Queen Elizabeth II').
     X = 'Queen Victoria' ;
     X = 'Princess Alexandra of Denmark' ;
@@ -40,10 +69,16 @@ Prolog Lab
     X = 'King Edward VIII' ;
     X = 'King George VI' ;
     X = 'Prince Philip' ;
+
 15. ?- regentWhenBorn(X, 'Queen Elizabeth II').
     X = 'King George V' ;
+
 16. I enjoy how straightforward Prolog is. I also enjoy how rules can be used in different ways by changing which term is variable.
+
 17. I don't like how prolog programs are run. There's no command line interface like the other languages we've used.
+
 18. I did enjoy this lab. It was simple enough, but still covered a lot of different basic Prolog topics.
-19. Approximately XXXXXXX hours.
+
+19. Approximately 2 hours.
+
 20. I don't think I will ever use Prolog again. I can see it being useful for database systems though.
