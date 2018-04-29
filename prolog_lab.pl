@@ -24,7 +24,12 @@ grandfather(GF,Y) :- grandparent(GF,Y), male(GF). %same as above but check gende
 grandmother(GM,Y) :- grandparent(GM,Y), female(GM).
 grandchild(GC,Y) :- grandparent(Y,GC).  %grandchild if Y is grandparent
 
-older(X,Y) :- born(X,D1), born(Y,D2), D1 < D2.  %get years born of X and Y, bind to D1 or D2, compare D1 and D2, if comparison is true, X is older, otherwise X is younger
+%lifespan is a helper rule for the older and younger rules
+lifespan(X,L) :- born(X,B), died(X,D), L is D-B, !.
+lifespan(X,L) :- born(X,B), L is 2018-B.
+
+older(X,Y) :- lifespan(X,L1), lifespan(Y,L2), L1>L2.  %get lifespans of X and Y, bind to L1 or L2, compare L1 and L2, if comparison is true, X is older, otherwise X is younger
+
 younger(X,Y) :- older(Y,X). %X is younger if Y is older.
 
 regentWhenBorn(X,Y) :- born(Y,D1), reigned(X,D2,D3), D2 =< D1, D1 < D3. %get year born of Y, bind to D1, get time X reigned, bind start and end year to D2 and D3, compare D1 to D2 and D3.

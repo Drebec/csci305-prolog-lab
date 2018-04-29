@@ -58,17 +58,8 @@ Prolog Lab
     false.
 
 14. ?- older(X, 'Queen Elizabeth II').
-    X = 'Queen Victoria' ;
-    X = 'Princess Alexandra of Denmark' ;
-    X = 'Queen Mary' ;
-    X = 'Mrs Simpson' ;
-    X = 'Lady Elizabeth Bowes-Lyon' ;
-    X = 'Prince Albert' ;
-    X = 'King Edward VII' ;
-    X = 'King George V' ;
-    X = 'King Edward VIII' ;
-    X = 'King George VI' ;
-    X = 'Prince Philip' ;
+    false.
+    Queen Elizabeth II lived to be 92. Longest of anyone in this family tree.
 
 15. ?- regentWhenBorn(X, 'Queen Elizabeth II').
     X = 'King George V' ;
@@ -79,7 +70,7 @@ Prolog Lab
 
 18. I did enjoy this lab. It was simple enough, but still covered a lot of different basic Prolog topics.
 
-19. Approximately 2 hours.
+19. Approximately 3 hours.
 
 20. I don't think I will ever use Prolog again. I can see it being useful for database systems though.
 
